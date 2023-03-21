@@ -10,21 +10,18 @@ function App() {
         base: `"nav""main"`,
         lg: `"nav nav""aside main"`,
       }}
-      gridTemplateRows={"60px 1fr 30px"}
-      gridTemplateColumns={"150px 1fr"}
-      h="100vh"
       color="blackAlpha.700"
       fontWeight="bold"
     >
-      <GridItem pl="2" area={"nav"}>
+      <GridItem area={"nav"}>
         <NavBar />
       </GridItem>
       <Show above="lg">
-        <GridItem color={"white"} pl="2" area={"aside"}>
+        <GridItem color={"white"}  area={"aside"}>
         
         </GridItem>
       </Show>
-      <GridItem color={"white"} pl="2" area={"main"}>
+      <GridItem color={"white"}  area={"main"}>
         <GameGrid />
       </GridItem>
     </Grid>
