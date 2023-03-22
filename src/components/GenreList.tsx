@@ -1,4 +1,11 @@
-import { HStack, List, ListItem, Image, Spinner, Button } from "@chakra-ui/react";
+import {
+  HStack,
+  List,
+  ListItem,
+  Image,
+  Spinner,
+  Button,
+} from "@chakra-ui/react";
 import { useState } from "react";
 import useGenres, { Genre } from "./../hooks/useGenres";
 
@@ -26,6 +33,9 @@ const GenreList = ({ onSelect, selectedGenre }: Props) => {
                   src={genre.image_background}
                 />
                 <Button
+                  fontWeight={
+                    genre.id === selectedGenre?.id ? "bold" : "normal"
+                  }
                   onClick={() => onSelect(genre)}
                   variant="link"
                   fontSize="lg"
